@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Doomsday Date Invite</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      background: linear-gradient(to bottom, #0a1930, #1a3a5a);
+      color: #4CAF50;
+    }
+    #yes { background: #4CAF50; padding: 10px 20px; font-size: 20px; color: white; }
+    #no { position: absolute; transition: 0.5s; background: #f44336; color: white; }
+    .confetti { margin-top: 20px; width: 80%; }
+    h1 { color: #8BC34A; }
+  </style>
+</head>
+<body>
+  <h1>Join me for Doomsday ⚔️</h1>
+  <p>Marvel's Doomsday movie premiere + 🍿 snacks</p>
+  <p>I'll unleash the power of the Multiverse... with you 😈</p>
+ 
+  <label>Pick a date & time: </label>
+  <input type="datetime-local" id="date">
+
+  <button id="yes" onclick="showConfetti()">Unleash Doom 😈</button>
+  <button id="no" onmouseover="moveNo()">Nope</button>
+
+  <div id="confettiDiv" style="display:none;">
+    <img src="https://zaf01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fi.gifer.com%2Fembedded%2Fdownload%2FZcZc.gif&data=05%7C02%7C44ha2507628%40myboston.co.za%7C3829bf6e9654458943c308df1fb5e4ec%7C2aada6576d1e4320b92edd700921dda5%7C0%7C0%7C639264538254124412%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=JzlVI7xDGJaiZW29aqiqamXn7dL6OR6M2fhsSCspLRQ%3D&reserved=0" class="confetti">
+    <h2>DOOM AWAITS! 🎉 See you there!</h2>
+  </div>
+
+  <script>
+    function moveNo() {
+      const noBtn = document.getElementById('no');
+      noBtn.style.top = Math.random() * 80 + '%';
+      noBtn.style.left = Math.random() * 80 + '%';
+    }
+    function showConfetti() {
+      document.getElementById('confettiDiv').style.display = 'block';
+      alert('Doom confirmed! 🎉 Check the date: ' + document.getElementById('date').value);
+    }
+  </script>
+</body>
+</html>
